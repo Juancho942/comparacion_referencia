@@ -26,5 +26,9 @@ def porcentaje_buscar (variableBuscar , variableDondeBuscar):
 df_excel['Cantidad Sistema'] = np.mean(df_excel, axis=1)
 print(df_excel['Cantidad Sistema'])'''
 
-imprimir = porcentaje_buscar("6203 2rs", "6203 2RS")
-print(imprimir)
+'''imprimir = porcentaje_buscar("6203 2rs", "6203 2RS")
+print(imprimir)'''
+df = pd.read_excel("data/Inventario.xlsx")
+print(df)
+
+
