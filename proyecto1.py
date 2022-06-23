@@ -1,6 +1,8 @@
 import pandas as pd
 from pandas.core.arrays import string_
 import numpy as np
+import openpyxl
+
 
 def porcentaje_buscar (variableBuscar , variableDondeBuscar):
     longitudReferecia = 0
@@ -29,6 +31,9 @@ print(df_excel['Cantidad Sistema'])'''
 '''imprimir = porcentaje_buscar("6203 2rs", "6203 2RS")
 print(imprimir)'''
 df = pd.read_excel("data/Inventario.xlsx")
-print(df)
+df2 = pd.read_excel("QH.xlsx")
+'''print(df)'''
+'''print(df[['REFERENCIA REAL']])'''
+print(df2)
 
 
