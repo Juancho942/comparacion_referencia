@@ -31,7 +31,7 @@ print(df_excel['Cantidad Sistema'])'''
 '''imprimir = porcentaje_buscar("6203 2rs", "6203 2RS")
 print(imprimir)'''
 df = pd.read_excel("data/Inventario.xlsx")
-df2 = pd.read_excel("QH.xlsx")
+df2 = pd.read_excel("data/QH.xlsx")
 '''print(df)'''
 '''print(df[['REFERENCIA REAL']])'''
 print(df2)
