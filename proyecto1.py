@@ -1,7 +1,8 @@
+from ast import For
 import pandas as pd
 from pandas.core.arrays import string_
 import numpy as np
-import openpyxl
+import openpyxl as py
 
 
 def porcentaje_buscar (variableBuscar , variableDondeBuscar):
@@ -24,16 +25,26 @@ def porcentaje_buscar (variableBuscar , variableDondeBuscar):
     porcentajeComparacion = (porcentajeComparacion * 100) / longitudReferecia             
     return porcentajeComparacion
 
-'''df_excel = pd.read_excel(io="inventario.xlsx", sheet_name="Reconteo")
-df_excel['Cantidad Sistema'] = np.mean(df_excel, axis=1)
-print(df_excel['Cantidad Sistema'])'''
-
 '''imprimir = porcentaje_buscar("6203 2rs", "6203 2RS")
 print(imprimir)'''
-df = pd.read_excel("data/Inventario.xlsx")
-df2 = pd.read_excel("data/QH.xlsx")
-'''print(df)'''
-'''print(df[['REFERENCIA REAL']])'''
-print(df2)
+cci = pd.read_excel("data/Elementos de inventario.xlsx")
+qh = pd.read_excel("data/QH.xlsx")
+resultado = pd.DataFrame(columns=['Ref CCi', 'Ref QH','porcentaje'])
+#SYB = pd.read_excel("data/SYB.xls")
+#print(QH[["REFERENCIA","MARCA"]])
+#print(CCI[["Código","Ref. fabricante","Marca"]])
+referenciaCci = cci["Ref. fabricante"]
+referenciaQh = qh["REFERENCIA"]
+for a in referenciaCci:
+    for b in referenciaQh:
+        if (porcentaje_buscar(a,b) > 100.0) :
+            print(a," ",b)
+        '''if porcentaje > 80:
+            resultado['Ref Cci'] = referenciaCci
+            resultado['Ref Qh'] = referenciaQh
+            resultado['porcentaje'] = porcentaje
+        print(resultado)'''
+
+        
 
 
