@@ -15,9 +15,10 @@ def porcentaje_buscar (variableBuscar , variableDondeBuscar):
         variableMayor = variableDondeBuscar
         variableMenor = variableBuscar
     for a in variableMenor: # genero la longitud de la referencia a buscar
-        if a ==" " or a ==".":
+        if a == " " or a == ".":
             continue
-        longitudReferecia = longitudReferecia + 1
+    longitudReferecia = longitudReferecia + 1
+        
     estado = 0    
     for i in variableMayor: # eferencia a la que se quiere comparar
         if i is " " or i is ".": # no comparo los espacios ni los .
@@ -47,15 +48,11 @@ referenciaQh = qh["REFERENCIA"]
 for a in referenciaCci:
     for b in referenciaQh:
         #if (porcentaje_buscar(str(a),str(b)) > 100.0) :
-        porcentaje = porcentaje_buscar(str(a),str(b))
+        '''porcentaje = porcentaje_buscar(str(a),str(b))
         if (porcentaje > 70):
-            print(a," ",b," : ",porcentaje )
-        '''if porcentaje > 80:
-            resultado['Ref Cci'] = referenciaCci
-            resultado['Ref Qh'] = referenciaQh
-            resultado['porcentaje'] = porcentaje
-        print(resultado)'''
-
-        
+            print(a," ",b," : ",porcentaje )'''
+        print(a, "zise : ", len(a))
+        print(b, "zise : " ,len(b))
+        print((a[1]==b[1]))
 
 
